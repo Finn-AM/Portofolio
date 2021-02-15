@@ -9,11 +9,134 @@ html{
 }
 
 body{
- font-family: 'Roboto';
+ font-family: 'roboto';
+ position: relative;
+ background-color: #353333;
+ overflow: hidden;
+
 }
+
+/* Header section */
 
 .header{
- background-color: #353333;
+ height: 667px;
+ /* width: 100vw; */
+position: relative;
+color: #fff;
+font-weight: 700;
+overflow: hidden;
+}
+
+.navbar{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ 
+}
+
+.nav-list{
+ display: flex;
+ width: 50%;
+ justify-content: space-between;
+}
+
+.logo{
+ z-index: 2 ;
+  font-size: 18px;
+}
+
+.nav-list li{
+ list-style: none;
+ z-index: 2;
+}
+
+
+.nav-list li a{
+text-decoration: none;
+color: #fff;
+font-weight: 700;
+font-family: 'Roboto';
+}
+
+.header::after{
+ content: '';
+ position: absolute;
+ background: url(./img//finn.png);
+ z-index: 1;
+ width: 300px;
+ height: 420px;
+ bottom: 0;
+ right: -40px;
+ background-size: 100% 100%;
+}
+
+.helper{
+width: 100vw;
+height: 131px;
+background-color: #1E1D1D;
+position: absolute;
+top: 124px;
+}
+
+.navbar::after{
+ content: '';
+ position: absolute;
+ background-color: #1e1d1d70 ;
+ z-index: 0;
+ width: 121px;
  height: 100vh;
+ top: 0;
+ left: 57px;
+ background-size: 100% 100%;
+}
+
+
+.header_intro{
+ position: absolute;
+ z-index: 2;
+ top: 153px;
+ left: 57px;
+}
+
+.header_text{
+ color: #40FFD1;
+ font-size: 36px;
+}
+
+.header_sub_text{
+ color: white;
+}
+
+/* Header Section Finished */
+
+/* About Me Section Start */
+
+
+/* .about_section{
+ position: relative;
+height: 1023px;
 
 }
+
+.about_section::after{
+ content: ' ';
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-color: #1E1D1D;
+ width: 720px;
+ height: 1023px;
+}
+
+.about{
+ z-index: 4;
+ position: absolute;
+ color: #40FFD1;
+ font-size: 96px;
+ top: 0;
+ left: 477px;
+}
+
+.me{
+ color: #fff;
+} */
