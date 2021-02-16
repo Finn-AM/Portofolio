@@ -22,3 +22,9 @@ message : `Why you include me? i'm only exist in your mind!`
 }];
 
 const left = document.querySelector('.left')
+const right = document.querySelector('.right')
+
+left.addEventListener('click' , ()=>{
+ alert('wtf dude')
+
+})
