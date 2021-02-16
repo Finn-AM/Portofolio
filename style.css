@@ -12,8 +12,12 @@ body{
  font-family: 'roboto';
  position: relative;
  background-color: #353333;
- overflow: hidden;
+ overflow-x: hidden;
 
+}
+
+svg{
+ fill: green;
 }
 
 /* Header section */
@@ -25,6 +29,8 @@ position: relative;
 color: #fff;
 font-weight: 700;
 overflow: hidden;
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+/* display: none; */
 }
 
 .navbar{
@@ -84,7 +90,7 @@ top: 124px;
  background-color: #1e1d1d70 ;
  z-index: 0;
  width: 121px;
- height: 100vh;
+ height: 120vh;
  top: 0;
  left: 57px;
  background-size: 100% 100%;
@@ -105,6 +111,8 @@ top: 124px;
 
 .header_sub_text{
  color: white;
+ font-style: italic;
+ font-weight: 300;
 }
 
 /* Header Section Finished */
@@ -112,31 +120,210 @@ top: 124px;
 /* About Me Section Start */
 
 
-/* .about_section{
+.about_section{
  position: relative;
-height: 1023px;
-
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ justify-content: start;
+height: 667px;
+/* AbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+/* display: none; */
+/* AbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
 }
+.about_section *{
+ z-index: 2;
+}
+
 
 .about_section::after{
  content: ' ';
  position: absolute;
+ width: 50%;
+ height: 667px;
  top: 0;
  left: 0;
  background-color: #1E1D1D;
- width: 720px;
- height: 1023px;
+
 }
 
 .about{
- z-index: 4;
- position: absolute;
  color: #40FFD1;
- font-size: 96px;
- top: 0;
- left: 477px;
+ font-size: 48px;
 }
 
 .me{
  color: #fff;
-} */
+}  
+
+.about-img{
+ margin: 20px 0;
+ background: url(./img/finn.png);
+ background-color: #353333;
+ background-size: 100% 100%;
+ width: 160px;
+ height: 160px;
+ border-radius: 50%;
+}
+
+.social_link{
+ width: 200px;
+ height: 50px;
+ position: relative;
+left: 15px;
+
+}
+
+.github, .facebook,.instagram{
+ width: 30px;
+ height: 30px;
+ margin-left: 16px;
+}
+
+.about_title{
+ font-size: 42px;
+ color: white;
+ margin-bottom: 2rem;
+}
+.about_sub{
+ color: white;
+ line-height: 1.7rem;
+ text-align: center;
+ font-weight: 100;
+ font-style: italic;
+}
+
+.about_sub strong{
+ color: #40FFD1;
+}
+
+
+/* About Me Section End */
+
+.containers{
+ height: 667px;
+}
+
+.btn-container{
+ display: flex;
+ height: 100px;
+ background-color: white;
+
+}
+.btn-container button{
+ font-size: 20px;
+ font-weight: 500;
+ flex: 1;
+ outline: none;
+ color: white;
+ background-color: #353333;
+ cursor: pointer;
+}
+
+.btn-container button:active{
+ cursor: grab;
+}
+
+.project{
+ border-radius: 5px;
+}
+
+
+/* Testimoni */
+.testimoni{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ color: white;
+ position: relative;
+ /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+ /* display: none; */
+}
+
+.testi-title{
+ font-size: 48px;
+ font-weight: bolder;
+ color: #40FFD1;
+ margin: 20px 0;
+}
+
+
+.testi-img{
+ background: url(./img/mom.jpg) no-repeat;
+ background-size: 100% 100%;
+ border-radius: 50%;
+ height: 160px;
+ width: 160px;
+}
+
+.left,.right{
+ color: red;
+ position: absolute;
+ top: 150px;
+}
+
+.left{
+ left: 60px;
+}
+
+.right{
+ right: 60px;
+}
+
+.testi-name{
+ font-style: italic;
+ margin: 25px 0;
+}
+
+.testi-message{
+ 
+ font-size: 20px;
+ font-weight: 700;
+}
+
+/* Projects */
+.project{
+ display: none;
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+}
+
+
+.lists-project{
+ display: grid;
+ /* align-items: center; */
+ justify-content: space-around;
+ width: 100vw;
+ grid-template-columns: repeat(3, 110px);
+ gap: 18px;
+}
+
+
+.lists-project .card{
+ height: 140px;
+ background-color: red;
+}
+
+.project-title{
+ text-align: center;
+ font-size: 48px;
+ color: #40FFD1;
+ margin: 2rem 0;
+}
+
+.skills{
+ position: relative;
+}
+
+.skill-text{
+ position: absolute;
+top: calc(50% + 50px);
+}
+
+.list-skill{
+ height: 130px;
+ width: 60%;
+ position: absolute;
+ background-color: red;
+ right: 20px;
+ top: 13px;
+}
