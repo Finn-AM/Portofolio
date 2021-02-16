@@ -20,3 +20,5 @@ name: 'My Girlfriend',
 img: '/img/girlfriend.jpg',
 message : `Why you include me? i'm only exist in your mind!`
 }];
+
+const left = document.querySelector('.left')
