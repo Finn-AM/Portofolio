@@ -6,6 +6,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
  <link rel="stylesheet" href="style.css">
  <script src="app.js" defer></script>
+ <script src="redirect.js" defer></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
@@ -13,22 +14,24 @@
 </head>
 <body>
 
-<header class="header">
- <div class="nav-container">
-  <div class="logo">Logo</div>
+
+ <header class="nav-container">
+  <div class="logo">
+  </div>
   
   <nav class="navbar">
    <ul class="nav-list">
     <li><a href="#home">Home</a></li>
-    <li><a href="#About">About</a></li>
-    <li><a href="#home">Contact</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#containers">Contact</a></li>
    </ul>
   </nav>
-  
   <div class="hamburger">
    <div class="burger"></div>
   </div>
- </div>
+ </header>
+
+<section class="header" id="home">
  
  <div class="helper"></div>
  <div class="helper1"></div>
@@ -36,15 +39,15 @@
  <h1 class="header_text">I'm Finn</h1>
  <h3 class="header_sub_text">A Lonely Self-taught Developer</h3>
 </div>
-</header>
+</section>>
 
-<section class="about_section">
+<section class="about_section" id="about">
 <h1 class="about">ABOUT <span class="me">ME</span></h1>
 <div class="about-img"></div>
 <div class="social_link">
- <a href=""><img class="github" src="/icon/github.svg" alt="github"></a>
- <a href=""><img class="facebook" src="/icon/facebook.svg" alt="github"></a>
- <a href=""><img class="instagram" src="/icon/instagram.svg" alt="github"></a>
+ <a href=""><img class="github" src="./icon/github.svg" alt="github"></a>
+ <a href=""><img class="facebook" src="./icon/facebook.svg" alt="github"></a>
+ <a href=""><img class="instagram" src="./icon/instagram.svg" alt="github"></a>
 </div>
 
 <h1 class="about_title">Finn A.M</h1>
@@ -53,7 +56,7 @@
 I used to be a blogger,  and by now i am a <strong> Front-end Developer </strong>, OR at least grinding to be :)</h3>
 </section>
 
-<div class="containers">
+<div class="containers" id="containers">
 
  <div class="btn-container">
 <button class="btn btn-testimoni active" data-id="testi">TESTIMONI</button>
@@ -61,7 +64,7 @@ I used to be a blogger,  and by now i am a <strong> Front-end Developer </strong
 <button class="btn btn-contact" data-id="contact">CONTACT ME</button>
  </div>
 
-<section  class="act-flex sect testimoni" id="testi"> 
+<section  class="act-flex  sect testimoni" id="testi"> 
 <h1 class="testi-title">Testimoni</h1>
 <div class="testi-img"></div>
 <i class="left fas fa-chevron-left fa-4x"></i>
@@ -88,17 +91,31 @@ I used to be a blogger,  and by now i am a <strong> Front-end Developer </strong
  <h1 class="skill-text">My Skills</h1>
  <div class="list-skill"></div>
 </div>
-
 </section>
 
-<section class="sect" id="contact">
+<!-- Sect 3 -->
 
+<section class="sect contact-me" id="contact">
 
+ <form class="form-contact" action="https://formspree.io/f/xpzoejlq" method="POST" id="my-form">
+
+<h1 class="contact">Contact Me</h1>
+
+  <label for="name">Name</label>
+<input type="text" name="name" id="" required>
+
+<label for="email">Email</label>
+<input type="email" name="email" id="email" autocomplete="off" required>
+
+<label for="message">Message: </label>
+
+<textarea name="message" required></textarea>
+<button class="submit-btn" type="submit" >Submit</button>
+
+<h3 id="my-form-status">...</h3>
+ </form>
 
 </section>
-
-
-
 
 </div>
 

@@ -13,11 +13,6 @@ body{
  position: relative;
  background-color: #353333;
  overflow-x: hidden;
-
-}
-
-svg{
- fill: green;
 }
 
 /* Header section */
@@ -35,37 +30,28 @@ font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* position: fixed;
-  width: 100%;
-  z-index:999; */
-}
-
-
-.navbar{
-  z-index: 1;
- /* position: fixed;
- width: 100%;
- /* align-items: center;
- transition: 500ms all ease; */
- 
+  height: 9vh;
 }
 
 .nav-list li{
   display: inline-block;
-  margin: 0 20px;
+ list-style: none;
+ z-index: 2;
+ width: auto;
+ padding: 0 2rem;
 }
+
+/* .nav-list li:hover{
+  background-color: #353333;
+  padding: 1.3rem 1rem;
+} */
+
 
 .logo{
  z-index: 2 ;
   font-size: 18px;
+  color: white;
 }
-
-
-.nav-list li{
- list-style: none;
- z-index: 2;
-}
-
 
 .nav-list li a{
 text-decoration: none;
@@ -100,8 +86,8 @@ top: 124px;
  background-color: #1e1d1d70 ;
  /* z-index: 0; */
  width: 121px;
- height: 120vh;
- top: -30px;
+ height: 200vh;
+ top: -120px;
  left: 57px;
  background-size: 100% 100%;
 }
@@ -119,7 +105,7 @@ top: 124px;
   font-size: 36px;
   transition-delay: 1s;
   opacity: 0;
-  animation: 1s randoms 500ms ease forwards;
+  animation: 1s randoms 500ms ease-in-out forwards;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -270,6 +256,7 @@ left: 15px;
  flex-direction: column;
  color: white;
  position: relative;
+ transition: 500ms all ease;
 }
 
 .testi-title{
@@ -286,13 +273,19 @@ left: 15px;
  border-radius: 50%;
  height: 160px;
  width: 160px;
+ transition: 600ms all ease;
 }
 
+.testi-img:hover{
+  transform: scale(1.2);
+}
+
+
 .left,.right{
- color: red;
+ color: #1E1D1D;
  position: absolute;
  top: 150px;
- cursor: pointer;
+ cursor: pointer; 
 }
 
 .left{
@@ -301,6 +294,10 @@ left: 15px;
 
 .right{
  right: 60px;
+}
+
+.left:active,.right:active{
+  transform: scale(0.9);
 }
 
 .testi-name{
@@ -360,6 +357,68 @@ top: calc(50% + 50px);
  top: 13px;
 }
 
+/* Contact Me */
+
+.contact{
+  display: block;
+  text-align: center;
+  font-size: 48px;
+  color: #40FFD1;
+  font-weight: 700;
+  margin: 25px;
+}
+
+.form-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-contact input{
+height: 6vh;
+}
+
+.form-contact textarea, .form-contact input{
+  font-size: 24px;
+font-family: cursive;
+color: #1E1D1D;
+}
+
+.form-contact textarea{
+  height: 20vh;
+}
+
+.form-contact .submit-btn{
+width: 40%;
+margin: 20px auto;
+padding: 20px;
+border-radius: 5px;
+outline: none;
+font-size: 24px;
+color: #40FFD1;
+font-weight: 700;
+background-color: #1E1D1D;
+position: relative;
+}
+
+.submit-btn:hover{
+cursor: pointer;
+}
+
+.form-contact label{
+  color: #59c285;
+  font-size: 1.25rem;
+}
+
+.form-contact .submit-btn:active{
+  top: 5px;
+}
+#my-form-status{
+  color:#40FFD1;
+  margin: 0 auto;
+}
 
 /* JS Req */
 
@@ -384,6 +443,9 @@ top: calc(50% + 50px);
 }
 
 /* animation */
+.social_link *:hover{
+transform: scale(1.2);
+}
 
 .btn:hover{
   transform: scale(1.02);
@@ -393,8 +455,6 @@ top: calc(50% + 50px);
 .btn:active{
   transform: scale(1);
 }
-
-
 
 .hamburger{
   position: relative;
@@ -440,24 +500,83 @@ transform: rotate(45deg)
 }
 
 .show.navbar{
+display: flex;
+visibility: visible;
+}
 
-display: flex;}
 
-
+.show.nav-container{
+  height: 30vh;
+}
 
 /* Media queries */
 
 @media screen and (max-width:600px){
   .hamburger{
     display: flex;
-  }.nav-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .nav-container{
     justify-content: space-between;
+    display: block;
+    position: relative;
+    overflow-y: hidden;
+    transition: 1s all ease;
     background-color: #1E1D1D;
-    height: 10vh;
-  }.navbar{
-    display: none;
+  }
+  .navbar{
+    visibility: hidden;
   }
   .nav-list li a{
     color: #40FFD1;
   }
+  .navbar{
+    width: 100%;
+  }
+  .nav-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+  .nav-list li{
+    padding: 1rem 0;
+    margin: 0 ;
+    width: 100%;
+  }
+    li:hover{
+      background-color: white;
+    }
+  }
+
+/* fix navbar */
+
+.fixed.nav-container{
+  position: sticky;
+  top: 50px;
+  width: 100%;
+  background-color: #1E1D1D;
+  z-index: 999;
+  border-bottom: 1px groove #40FFD1;
+  animation: fly 500ms ease-in-out forwards;
 }
+
+@keyframes fly{
+  to{
+    top: 0;
+  }
+}
+
+/* Media queries big screen */
+
+/* @media screen and (min-width:1000px){
+  .header_text{
+    font-size: 42px;
+  }.header_sub_text{
+    font-size: 26px;
+  }
+} */
