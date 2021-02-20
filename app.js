@@ -2,25 +2,25 @@
 
 const testimoniArr = [
 {id:1,
-name: 'Mom',
+name: '~Mom',
 img: './img/mom.jpg',
-message : `I Don't have a clue but i'll support him`},
+message : `"I Don't have a clue but i'll support him "`},
 {id:2,
-name: 'Dad',
+name: '~Dad',
 img: './img/dad.jpg',
-message : `IDGAF, but don't forget me after you got the salary`},
+message : `"IDGAF, but don't forget me after you got the salary"`},
 {id:3,
-name: 'Big bro',
+name: '~Big bro',
 img: './img/bro.jpg',
-message : `Stop doing this and join my company`},
+message : `"Stop doing this and join my company"`},
 {id:4,
-name: 'Lil sis',
+name: '~Lil sis',
 img: './img/lil_sis.jpg',
-message : `I thought programmer is cool`},
+message : `"I thought programmer is cool"`},
 {id:5,
-name: 'My Girlfriend',
+name: '~My Girlfriend',
 img: './img/girlfriend.jpg',
-message : `Why you include me? i'm only exist in your mind!`
+message : `"Why you include me? i'm only exist in your mind!"`
 }];
 
 const left = document.querySelector('.left');
@@ -87,8 +87,8 @@ section.forEach((sect) =>{
 });
 
 const element = document.getElementById(id);
-console.log(element.id);
 
+element.animate([{opacity:'0.1'},{opacity:'1'}],{duration:500,fill:'forwards'});
 
 // making diffrence in flex / block
 
@@ -146,11 +146,3 @@ else{
  nav.classList.remove('fixed')}
 };
 
-
-// Submit form
-
-// const form = document.querySelector('.form-contact')
-
-// form.addEventListener((e)=>{
-//   e.preventDefault();
-// })
