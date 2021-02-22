@@ -13,17 +13,18 @@ body{
  position: relative;
  background-color: #353333;
  overflow-x: hidden;
+ width: 100vw;
 }
 
 /* Header section */
 
 .header{
  height: 667px;
- /* width: 100vw; */
+ width: 100vw;
 position: relative;
 color: #fff;
 font-weight: 700;
-/* overflow: hidden; */
+overflow: hidden;
 }
 
 .nav-container{
@@ -31,6 +32,7 @@ font-weight: 700;
   align-items: center;
   justify-content: space-around;
   height: 9vh;
+  background-color: #1E1D1D;
 }
 
 .nav-list li{
@@ -43,8 +45,11 @@ font-weight: 700;
 
 .logo{
  z-index: 2 ;
+ display: inline;
   font-size: 18px;
   color: white;
+  position: relative;
+  top: 15px;
 }
 
 .nav-list li a{
@@ -107,7 +112,7 @@ top: 124px;
   from{
     width: 0;
   }to{
-    width: 500px;
+    width: 265px;
   }
 }
 
@@ -120,15 +125,23 @@ top: 124px;
   }
 }
 
+@keyframes blink{
+  0%{
+    border-right-color: transparent;
+  }100%{
+    border-right-color: #fff;
+  }
+}
 
 
 .header_sub_text{
   color: white;
   font-style: italic;
   font-weight: 300;
-  animation: 2.5s autowrite linear 1s 1 normal both;
+  animation: 2.5s autowrite linear 1s 1 normal both,blink 600ms infinite;
   overflow: hidden;
   white-space: nowrap;
+  border-right: 2px solid #40FFD1;
 }
 
 /* Header Section Finished */
@@ -168,7 +181,7 @@ height: 667px;
 hr{
   width: 20vh;
   position: relative;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .me{
@@ -194,6 +207,7 @@ left: 15px;
 }
 
 .github, .facebook,.instagram{
+  cursor: pointer;
  width: 30px;
  height: 30px;
  margin-left: 16px;
@@ -286,11 +300,11 @@ left: 15px;
 }
 
 .left{
- left: 60px;
+ left: 50px;
 }
 
 .right{
- right: 60px;
+ right: 50px;
 }
 
 .left:active,.right:active{
@@ -325,6 +339,7 @@ left: 15px;
 
 .card{
   text-align: center;
+  border-radius: 5px;
 }
 
 .card h3, .card a {
@@ -342,7 +357,7 @@ left: 15px;
 }
 
 .lists-project .card{
- height: 150px;
+ height: 220px;
  background-color: #1E1D1D;
 }
 
@@ -541,7 +556,7 @@ visibility: visible;
 }
 
 .show.nav-container{
-  height: 30vh;
+  height: 33vh;
 }
 
 /* Media queries */
@@ -551,7 +566,7 @@ visibility: visible;
     display: flex;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1rem;
   }
   .nav-container{
     justify-content: space-between;
@@ -614,6 +629,8 @@ visibility: visible;
     font-size: 3rem;
   }.header_sub_text{
     font-size: 1.5rem;
+  }.logo{
+    top: 0;
   }
   .nav-list li{
     font-size: 1.5rem;
@@ -651,5 +668,77 @@ visibility: visible;
 .list-skill i img{
 width: 40px;
 height: 40px;
+}@keyframes autowrite{
+  from{
+    width: 0;
+  }
+to{
+    width: 340px;
+  }
+}.contact{
+      font-size: 2.5rem;
+  }
 }
+
+
+/* preloader */
+
+.preloader{
+position: fixed;
+z-index: 9999;
+top: 0;
+ width: 100vw;
+ height: 100vh;
+ background-color: black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.loader{
+ background-color: transparent; 
+ animation: wheel 5s linear infinite alternate-reverse, rotate 4s linear infinite;
+ border: 10px solid;
+ border-collapse: separate;
+ border-top-color:#40FFD1;
+ border-bottom-color:#40FFD1;
+ border-right-color:transparent ;
+ border-left-color:transparent ;
+ border-radius: 50%;
+}
+
+@keyframes rotate{
+ 100%{
+  transform: rotate(6turn);
+ }
+}
+
+@keyframes wheel{
+ 0%{
+  width: 100px;
+  height: 100px;
+ }
+ 20%{
+  width: 150px;
+  height: 150px;
+ }40%{
+  width: 100px;
+  height: 100px;
+ }60%{
+  width: 150px;
+  height: 150px;
+ }80%{
+  width: 100px;
+  height: 100px;
+ }100%{
+   width: 150px;
+  height: 150px;
+ }
+}
+
+.hide{
+ transition: 0.2s all linear ;
+transform: scale(0);
+ overflow: hidden;
+ z-index: -1;
 }
