@@ -164,8 +164,8 @@ function addFixed() {
 
 // preloader
 
-const preloader = document.querySelector('.preloader');
+// const preloader = document.querySelector('.preloader');
 
-window.addEventListener('load', () => {
-  preloader.classList.add('hide');
-});
+// window.addEventListener('load', () => {
+//   preloader.classList.add('hide');
+// });
